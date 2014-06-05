@@ -27,7 +27,7 @@ header {
 	width:13.5em;
 }
 #content {
-	display: inline-block;
+	display: block;
 	width: 100%;
 }
 footer {
@@ -91,6 +91,9 @@ a:hover {
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	font-weight:400 !important;
 }
+strong {
+	font-weight: 700;
+}
 blockquote {
 	border-left: 0.4em solid #eee;
 	padding-left: 1.2em;
@@ -144,6 +147,23 @@ header #logo img {
 	-webkit-border-radius: 4.5em;
 	border: none;
 }
+#follow-icons {
+	font-size: 0.7em;
+	margin-top: -0.7em;
+	margin-bottom: 1.5em;
+}
+#follow-icons a {
+	color: #ccc;
+}	
+#follow-icons span {
+	vertical-align:top;
+	margin-left:-0.15em;
+	margin-right:-0.15em;
+}
+#follow-icons span .fa-stack-1x {
+	font-size:1.05em;
+	line-height:1.9em;
+}
 header h6 {
 	margin-top:0.5em;
 }
@@ -161,6 +181,31 @@ h3.post-title {
 	border-bottom: 1px solid #eee;
 	font-size: 1.2em;
 	color: #444;
+}
+.post-title .feature-star {
+	font-size: 0.9em;
+}
+.separator, .taglist, .feature-star {
+	color: #ccc;
+}
+.taglist a {
+	background-color:#ccc;
+	color:#fff;
+	padding:0.3em 0.6em 0.3em 0.6em;
+	vertical-align:10%;  
+	font-size:0.5em;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700 !important;
+	text-transform:uppercase;
+	letter-spacing:0.05em;
+	border-radius:0.25em;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+}
+#social-bar {
+	margin-top:1.5em;
+	background-color:#eee;
+	padding:0.5em;
 }
 #comments {
 	margin-top: 0.15em;
@@ -219,5 +264,8 @@ footer a:hover {
 	}
 	footer {
 		padding: 0 1.5em 1.2em 1.5em;
+	}
+	ul, ol {
+		margin-left: 2em; 
 	}
 }

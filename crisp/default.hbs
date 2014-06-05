@@ -7,20 +7,22 @@
 	    {{! Page Meta }}
 	    <title>{{meta_title}}</title>
 	    <meta name="description" content="{{meta_description}}" />
-	    {{! Styles }}
+	    <link rel="shortcut icon" href="{{@blog.logo}}"/>
+			{{! Styles }}
 	    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="{{asset '/styles/crisp.css'}}">
-		<link rel="shortcut icon" href="{{@blog.logo}}"/>
-	    {{! Responsive Meta Tags }}
+			<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+			<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="{{asset '/styles/crisp.css'}}">
+			{{! Responsive Meta Tags }}
 	    <meta name="HandheldFriendly" content="True" />
 	    <meta name="MobileOptimized" content="320" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]--> 
+			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+			<!--[if lt IE 9]>
+				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+				<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<![endif]-->  
+			{{{block "head"}}}  
 	    {{ghost_head}}
 	</head>
 	<body class="{{body_class}}">
@@ -28,14 +30,14 @@
 			{{#if @blog.logo}}<a id="logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
 			<h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
 			<p>{{@blog.description}}</p>
-			<h6><a href="{{@blog.url}}/about/">About</a></h6>
-			<h6><a href="{{@blog.url}}/rss/">RSS</a></h6>
+			{{> follow}}
+			{{> navigation}}
 		</header>
 		<main id="content">
 			{{{body}}}
 		</main>
 		<footer id="footer">
-			<section id="footer-message">&copy; {{date format='YYYY'}} {{@blog.title}}. All rights reserved. Powered by <a href="http://ghost.org" target="_blank">Ghost</a>. <a href="http://github.com/kathyqian/crisp" target="_blank">Crisp</a> theme by <a href="http://kathyqian.com" target="_blank">Kathy Qian</a>.</section>
+			<section id="footer-message">&copy; {{date format='YYYY'}} {{@blog.title}}. All rights reserved. Powered by <a href="http://ghost.org" target="_blank">Ghost</a>. <a href="https://github.com/kathyqian/crisp-ghost-theme" target="_blank">Crisp</a> theme by <a href="http://kathyqian.com" target="_blank">Kathy Qian</a>.</section>
 		</footer>
 	{{ghost_foot}}
 
